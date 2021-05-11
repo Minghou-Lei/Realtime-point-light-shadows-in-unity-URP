@@ -13,11 +13,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{33d8975e-4c10-01ad-81b3-07fb81b4a51c}</ProjectGuid>
+    <ProjectGuid>{8d17ddae-b28e-615a-266e-61ef34a4b547}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <AssemblyName>Unity.RenderPipelines.Core.Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -31,7 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn></NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -41,7 +41,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn></NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -52,7 +52,75 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\Context.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\CameraState.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Utilities\EditorMaterialQuality.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\DisplayWindow.EnvironmentLibrarySidePanel.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\ShaderGenerator\ShaderTypeGeneration.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\EnvironmentLibrary.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Debugging\DebugUIDrawer.Builtins.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Debugging\DebugUIDrawer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\LookDevRenderer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\ExpandedState.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\SerializedDataParameter.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\LookDev.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\Drawers\IntParameterDrawer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\CoreEditorUtils.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\CoreEditorDrawers.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Gizmo\HierarchicalBox.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Lighting\CoreLightEditorUtilities.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\MaterialUpgrader.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Debugging\DebugWindow.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\ShaderGenerator\ShaderGeneratorMenu.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Lighting\IESObject.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\DropArea.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Lighting\IESReader.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Lighting\IESImporterEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\Drawers\FloatParameterDrawer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\RenderGraph\RenderGraphViewer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\PropertyFetcher.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\Drawers\Vector4ParameterDrawer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\Stage.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\ProjectorEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\Compositor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeComponentEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeComponentListEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\InspectorCurveEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Lighting\IESImporter.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\DisplayWindow.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\QuaternionPropertyDrawer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Debugging\DebugUIHandlerCanvasEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeProfileEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\ToolbarRadio.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\DisplayWindow.DebugSidePanel.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\Environment.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Debugging\DebugState.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\FilterWindow.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Debugging\UIFoldoutEditor.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\ComparisonGizmoController.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Lighting\IESEngine.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\Drawers\ColorParameterDrawer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Utilities\SerializedBitArray.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeProfileFactory.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\CameraController.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeMenuItems.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\ContextualMenuDispatcher.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeParameterDrawer.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\ShaderGenerator\CSharpToHLSL.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\EditorPrefBoolFlags.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\ComparisonGizmoState.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\CoreEditorStyles.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Volume\VolumeComponentProvider.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Gizmo\HierarchicalSphere.cs" />
+     <Compile Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\CameraEditorUtils.cs" />
+     <None Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\CubeToLatlong.shader" />
+     <None Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\Compositor.shader" />
+     <None Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\DisplayWindow.uss" />
+     <None Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\DisplayWindow-PersonalSkin.uss" />
+     <None Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\LookDev\Inspectors.uss" />
+     <None Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Gizmo\UnlitGizmo.shader" />
+     <None Include="Packages\com.unity.render-pipelines.core@10.4.0\Editor\Unity.RenderPipelines.Core.Editor.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Unity/Unity Hub/2020.3.7f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -632,87 +700,23 @@
  <Reference Include="System.Xml.XPath.XDocument">
  <HintPath>D:/Unity/Unity Hub/2020.3.7f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Searcher.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>D:/Github projects/Realtime-point-light-shadows-in-unity-URP/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{19ec983c-b696-59c0-1782-036cfe855b5a}</Project>
-      <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{17832379-4964-355d-ff45-6fc67de1a78f}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{03b94d16-11a9-8f59-48af-774692621411}</Project>
-      <Name>Unity.RenderPipelines.Universal.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{410e6d93-7b30-dc16-d6de-bda93743d558}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{b39f6dac-15f3-62e0-50bd-1e612ed699cc}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
       <Project>{5afd3b9c-7fa9-ce2f-b9a6-6b11be8dc672}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{eec8c123-1032-8c49-acb6-8f460a391aab}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{8d17ddae-b28e-615a-266e-61ef34a4b547}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
