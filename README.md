@@ -2,9 +2,11 @@
 
 Status: In progress
 
-![Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/ShadowMap.png](Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/ShadowMap.png)
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled.png)
 
 unity 2019的URP是不支持实时点光源阴影的，我们可以通过修改urp管线来实现:
+
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/ShadowMap.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/ShadowMap.png)
 
 首先我们先要修改UniversalRenderPipeline.cs这个脚本，这个脚本用C#定义了每一帧渲染管线的执行步骤。我们需要修改InitializeRenderingData这个函数，它的作用是在渲染下一帧前准备好所需的数据：
 
@@ -181,7 +183,7 @@ public static bool ExtractPointLightMatrix(ref CullingResults cullResults, ref S
 }
 ```
 
-![Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled.png](Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled.png)
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%201.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%201.png)
 
 该函数输出的ShadowSliceData，包含图集
 
@@ -232,29 +234,29 @@ int sliceIndex = 0;
             }
 ```
 
-![Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%201.png](Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%201.png)
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%202.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%202.png)
 
 slice信息
 
 SliceTransform是视口变换矩阵，其中：
 
-![Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%202.png](Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%202.png)
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%203.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%203.png)
 
 当Index = 0时，SliceTransform = 
 
-![Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%203.png](Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%203.png)
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%204.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%204.png)
 
 进行了缩放
 
 当Index = 1时，SliceTransform = 
 
-![Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%204.png](Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%204.png)
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%205.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%205.png)
 
 缩放，并在x轴上平移
 
 当Index = 5时，SliceTransform = 
 
-![Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%205.png](Realtime-point-light-shadows-in-unity-URP%205e00cb338135459495505bdc338c1812/Untitled%205.png)
+![Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%206.png](Realtime-point-light-shadows-in-unity-URP%20baf834be833f442c9610cd00f4c22bf7/Untitled%206.png)
 
 缩放，在X轴和Y轴上平移
 
